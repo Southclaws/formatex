@@ -185,7 +185,7 @@ stock formatex(szOutput[], iLength = sizeof(szOutput), const szFormatString[], {
 			
 				switch (s_szBuffer[iPos]) {
 					// Handled by the original format function
-					case '*', 'i', 'd', 'x', 'h', 'c', 's', 'f', 'b': {
+					case '*', 'i', 'd', 'x', 'h', 'c', 's', 'f', 'b', 'q': {
 						// Get the argument address and save it for later
 						#emit LCTRL        5
 						#emit LOAD.S.alt  iArg
