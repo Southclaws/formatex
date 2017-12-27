@@ -8,6 +8,20 @@ All credits to [Slice/oscar-broman](https://github.com/oscar-broman)
 
 The original library wasn't shipped with an explicit license but I'm sure, in the spirit of Open Source, Slice is happy to have this redistributed via GitHub - if not, let me know!
 
+## Installation
+
+Simply install to your project:
+
+```bash
+sampctl package install Owner/library
+```
+
+Include in your code and begin using the library:
+
+```pawn
+#include <library>
+```
+
 ---
 
 ## Original Documentation
@@ -43,10 +57,10 @@ format(msg, _, "You were given %w by %P", weapon, playerid);
 ## New Specifiers
 
 | Specifier | Description                                                                                                  |
-|-----------|--------------------------------------------------------------------------------------------------------------|
+| --------- | ------------------------------------------------------------------------------------------------------------ |
 | %p        | Name of the player ID given.                                                                                 |
 | %P        | Name of the player ID given, with the player's color before it.                                              |
-| %C        | Inline color (ex. {FFFFFF}) from a normal color (ex. colors you get from       GetPlayerColor).              |
+| %C        | Inline color (ex. {FFFFFF}) from a normal color (ex. colors you get from GetPlayerColor).                    |
 | %v        | Vehicle model name from the model given (not vehicle ID, vehicle model).                                     |
 | %w        | Weapon name, lower-case singular (to be used in sentences). Example: "an M4", "a combat shotgun", "a knife". |
 | %W        | Weapon's name.                                                                                               |
