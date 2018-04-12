@@ -1,25 +1,29 @@
 # formatex
 
+[![sampctl](https://shields.southcla.ws/badge/sampctl-formatex-2f2f2f.svg?style=for-the-badge)](https://github.com/Southclaws/formatex)
+
 Slice's formatex because it doesn't have a GitHub repo.
 
 Original thread: http://forum.sa-mp.com/showthread.php?t=313488
 
 All credits to [Slice/oscar-broman](https://github.com/oscar-broman)
 
-The original library wasn't shipped with an explicit license but I'm sure, in the spirit of Open Source, Slice is happy to have this redistributed via GitHub - if not, let me know!
+The original library wasn't shipped with an explicit license but I'm sure, in
+the spirit of Open Source, Slice is happy to have this redistributed via
+GitHub - if not, let me know!
 
 ## Installation
 
 Simply install to your project:
 
 ```bash
-sampctl package install Owner/library
+sampctl package install Southclaws/formatex
 ```
 
 Include in your code and begin using the library:
 
 ```pawn
-#include <library>
+#include <formatex>
 ```
 
 ---
@@ -28,7 +32,8 @@ Include in your code and begin using the library:
 
 Hey,
 
-After seeing a great new feature in sscanf that allows you to create custom specifiers, I figured it was only right to do the same to format and printf!
+After seeing a great new feature in sscanf that allows you to create custom
+specifiers, I figured it was only right to do the same to format and printf!
 
 For example, the following code could be made a lot shorter:
 
@@ -69,8 +74,8 @@ format(msg, _, "You were given %w by %P", weapon, playerid);
 
 ## You can create your own specifiers!
 
-You can do this very easily; example of one that puts an upper-case string at %S:
-Add this anywhere outside of a function:
+You can do this very easily; example of one that puts an upper-case string at
+%S: Add this anywhere outside of a function:
 
 ```pawn
 // Upper-case string
@@ -88,7 +93,8 @@ printf("hello %S!", "world");
 // prints: hello WORLD!
 ```
 
-If you want an integer, float, or anything else instead of a string you just change it:
+If you want an integer, float, or anything else instead of a string you just
+change it:
 
 ```pawn
 // You can call the argument whatever you like, and it can be a string/array:
@@ -101,6 +107,8 @@ FormatSpecifier<'D'>(output[], const string[]) { ... }
 
 ## Additional notes
 
-Worth mentioning is this is a superset of format, meaning it has exactly all the features of format and those behave like always (the only exception is it's a bit friendlier to packed strings, though %s still doesn't support it).
+Worth mentioning is this is a superset of format, meaning it has exactly all the
+features of format and those behave like always (the only exception is it's a
+bit friendlier to packed strings, though %s still doesn't support it).
 
 It actually uses the original native "format" function to do the heavy lifting.

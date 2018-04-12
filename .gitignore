@@ -2,8 +2,10 @@
 # Package only files
 #
 
-# Compiled Bytecode
+# Compiled Bytecode, precompiled output and assembly
 *.amx
+*.lst
+*.asm
 
 # Vendor directory for dependencies
 dependencies/
@@ -36,3 +38,9 @@ samp-npc
 # logs
 logs/
 server_log.txt
+
+#
+# Common files
+#
+
+*.sublime-workspace
