@@ -385,25 +385,25 @@ FormatSpecifier<'P'>(output[], playerid) {
 FormatSpecifier<'W'>(output[], weapon) {
 	static const
 		s_WeaponNames[][] = {
-			{!"Fists"          }, {!"Knuckles"    }, {!"Golfclub"       }, //  0,  1,  2
-			{!"Nightstick"     }, {!"Knife"       }, {!"Bat"            }, //  3,  4,  5
-			{!"Shovel"         }, {!"Pool Cue"    }, {!"Katana"         }, //  6,  7,  8
-			{!"Chainsaw"       }, {!"Dildo"       }, {!"Vibrator"       }, //  9, 10, 11
-			{!"Vibrator"       }, {!"Vibrator"    }, {!"Flowers"        }, // 12, 13, 14
-			{!"Cane"           }, {!"Grenade"     }, {!"Teargas"        }, // 15, 16, 17
-			{!"Molotov"        }, {!""            }, {!""               }, // 18,   ,   
-			{!""               }, {!"9mm"         }, {!"Silenced Pistol"}, //   , 22, 23
-			{!"Deagle"         }, {!"Shotgun"     }, {!"Sawnoffs"       }, // 24, 25, 26
-			{!"Combat Shotgun" }, {!"Mac-10"      }, {!"MP5"            }, // 27, 28, 29
-			{!"AK-47"          }, {!"M4"          }, {!"Tec-9"          }, // 30, 31, 32
-			{!"Cuntgun"        }, {!"Sniper"      }, {!"Rocketlauncher" }, // 33, 34, 35
-			{!"Heatseeking RPG"}, {!"Flamethrower"}, {!"Minigun"        }, // 36, 37, 38
-			{!"Satchel"        }, {!"Detonator"   }, {!"Spraycan"       }, // 39, 40, 41
-			{!"Extinguisher"   }, {!"Camera"      }, {!"Nightvision"    }, // 42, 43, 44
-			{!"Infrared"       }, {!"Parachute"   }, {!"Fake Pistol"    }, // 45, 46, 47
-			{!""               }, {!"Vehicle"     }, {!"Helikill"       }, //   , 49, 50
-			{!"Explosion"      }, {!""            }, {!"Drown"          }, // 51,   , 53
-			{!"Collision"      }, {!"Splat"       }, {!"Unknown"        }  // 54, 55, 56
+			{!"Fists"          		}, {!"Brass Knuckles"   }, {!"Golf club"       		}, //  0,  1,  2
+			{!"Nightstick"     		}, {!"Knife"       		}, {!"Baseball Bat"         }, //  3,  4,  5
+			{!"Shovel"         		}, {!"Pool Cue"    		}, {!"Katana"         		}, //  6,  7,  8
+			{!"Chainsaw"       		}, {!"Purple Dildo"     }, {!"Dildo"       			}, //  9, 10, 11
+			{!"Vibrator"       		}, {!"Silver Vibrator"	}, {!"Flowers"        		}, // 12, 13, 14
+			{!"Cane"           		}, {!"Grenade"     		}, {!"Tear Gas"       		}, // 15, 16, 17
+			{!"Molotov Cocktail"	}, {!""            		}, {!""               		}, // 18,   ,   
+			{!""               		}, {!"9mm"         		}, {!"Silenced 9mm"			}, //   , 22, 23
+			{!"Desert Eagle"    	}, {!"Shotgun"     		}, {!"Sawnoff Shotgun"      }, // 24, 25, 26
+			{!"Combat Shotgun" 		}, {!"Micro Uzi"   		}, {!"MP5"            		}, // 27, 28, 29
+			{!"AK-47"          		}, {!"M4"          		}, {!"Tec-9"          		}, // 30, 31, 32
+			{!"Country Rifle"   	}, {!"Sniper Rifle"		}, {!"RPG" 					}, // 33, 34, 35
+			{!"HS Rocket"			}, {!"Flamethrower"		}, {!"Minigun"        		}, // 36, 37, 38
+			{!"Satchel Charge"  	}, {!"Detonator"   		}, {!"Spraycan"       		}, // 39, 40, 41
+			{!"Fire Extinguisher"	}, {!"Camera"      		}, {!"Nightvision Goggles"  }, // 42, 43, 44
+			{!"Thermal Goggles"     }, {!"Parachute"   		}, {!"Fake Pistol"    		}, // 45, 46, 47
+			{!""               		}, {!"Vehicle"     		}, {!"Helikill"       		}, //   , 49, 50
+			{!"Explosion"      		}, {!""            		}, {!"Drown"          		}, // 51,   , 53
+			{!"Collision"      		}, {!"Splat"       		}, {!"Unknown"        		}  // 54, 55, 56
 		}
 	;
 	
@@ -417,25 +417,25 @@ FormatSpecifier<'W'>(output[], weapon) {
 FormatSpecifier<'w'>(output[], weapon) {
 	static const
 		s_WeaponNamesLowercaseSingular[][] = {
-			{!"fists"             }, {!"knuckles"      }, {!"a golfclub"       }, //  0,  1,  2
-			{!"a nightstick"      }, {!"a knife"       }, {!"a bat"            }, //  3,  4,  5
-			{!"a shovel"          }, {!"a pool cue"    }, {!"a katana"         }, //  6,  7,  8
-			{!"a chainsaw"        }, {!"a dildo"       }, {!"a vibrator"       }, //  9, 10, 11
-			{!"a vibrator"        }, {!"a vibrator"    }, {!"flowers"          }, // 12, 13, 14
-			{!"a cane"            }, {!"a grenade"     }, {!"teargas"          }, // 15, 16, 17
-			{!"a molotov"         }, {!""              }, {!""                 }, // 18,   ,   
-			{!""                  }, {!"a 9mm"         }, {!"a silenced pistol"}, //   , 22, 23
-			{!"a deagle"          }, {!"a shotgun"     }, {!"sawnoffs"         }, // 24, 25, 26
-			{!"a combat shotgun"  }, {!"a mac-10"      }, {!"an mp5"           }, // 27, 28, 29
-			{!"an ak-47"          }, {!"an m4"         }, {!"a tec-9"          }, // 30, 31, 32
-			{!"a cuntgun"         }, {!"a sniper"      }, {!"a rocketlauncher" }, // 33, 34, 35
-			{!"a heatseeking rpg" }, {!"a flamethrower"}, {!"a minigun"        }, // 36, 37, 38
-			{!"a satchel"         }, {!"a detonator"   }, {!"a spraycan"       }, // 39, 40, 41
-			{!"an extinguisher"   }, {!"a camera"      }, {!"nightvision"      }, // 42, 43, 44
-			{!"an infrared"       }, {!"a parachute"   }, {!"a fake pistol"    }, // 45, 46, 47
-			{!""                  }, {!"a vehicle"     }, {!"a helikill"       }, //   , 49, 50
-			{!"an explosion"      }, {!""              }, {!"drowning"         }, // 51,   , 53
-			{!"a collision"       }, {!"a splat"       }, {!"something unknown"}  // 54, 55, 56
+			{!"fists"             	}, {!"brass knuckles"     }, {!"a golfclub"       }, //  0,  1,  2
+			{!"a nightstick"      	}, {!"a knife"       		}, {!"a baseball bat"            }, //  3,  4,  5
+			{!"a shovel"          	}, {!"a pool cue"    		}, {!"a katana"         }, //  6,  7,  8
+			{!"a chainsaw"        	}, {!"a purple dildo"     }, {!"a dildo"       }, //  9, 10, 11
+			{!"a vibrator"        	}, {!"a silver vibrator"  }, {!"flowers"          }, // 12, 13, 14
+			{!"a cane"            	}, {!"a grenade"     		}, {!"tear gas"          }, // 15, 16, 17
+			{!"a molotov cocktail"	}, {!""              		}, {!""                 }, // 18,   ,   
+			{!""                  	}, {!"a 9mm"         		}, {!"a silenced 9mm"}, //   , 22, 23
+			{!"a desert eagle"    	}, {!"a shotgun"     		}, {!"swanoff shotgun"         }, // 24, 25, 26
+			{!"a combat shotgun"  	}, {!"a micro uzi"      	}, {!"an mp5"           }, // 27, 28, 29
+			{!"an ak-47"          	}, {!"an m4"         		}, {!"a tec-9"          }, // 30, 31, 32
+			{!"a country rifle"   	}, {!"a sniper rifle"		}, {!"an rpg" }, // 33, 34, 35
+			{!"a hs rpg" 		  	}, {!"a flamethrower"		}, {!"a minigun"        }, // 36, 37, 38
+			{!"a satchel charge"  	}, {!"a detonator"   		}, {!"a spraycan"       }, // 39, 40, 41
+			{!"a fire extinguisher" }, {!"a camera"      		}, {!"nightvision"      }, // 42, 43, 44
+			{!"an infrared"       	}, {!"a parachute"   		}, {!"a fake pistol"    }, // 45, 46, 47
+			{!""                  	}, {!"a vehicle"     		}, {!"a helikill"       }, //   , 49, 50
+			{!"an explosion"      	}, {!""              		}, {!"drowning"         }, // 51,   , 53
+			{!"a collision"       	}, {!"a splat"       		}, {!"something unknown"}  // 54, 55, 56
 		}
 	;
 	
@@ -514,6 +514,33 @@ FormatSpecifier<'v'>(output[], modelid) {
 // Unsigned 4-byte hex
 FormatSpecifier<'X'>(output[], value) {
 	format(output, sizeof(output), "%02x%06x", value >>> 24, value & 0xFFFFFF);
+}
+
+// Names of months starts at 1: January, ends at 12: December, anything below/above 1 or 12 will be wrapped to 1 and 12 respectively.
+FormatSpecifier<'M'>(output[], value) {
+	static const
+		s_MonthsNames[][] = {
+			{!"January"	}, {!"February"	}, {!"March"	},
+			{!"April"   }, {!"May"      }, {!"June"     },
+			{!"July"    }, {!"August"   }, {!"September"},
+			{!"October"  }, {!"November"}, {!"December" }
+		}
+	;
+
+	strcat(output, s_MonthsNames[(value < 1 ? 1 : value > 12 ? 12 : value) - 1]);
+}
+
+// Day of week names starts at 1: Sunday, ends at 7: Saturday, anything below/above 1 or 7 will be wrapped to 1 and 7 respectively.
+FormatSpecifier<'D'>(output[], value) {
+	static const
+		s_DaysNames[][] = {
+			{!"Sunday"		}, {!"Monday" 	}, {!"Tuesday"	},
+			{!"Wednesday"   }, {!"Thursday" }, {!"Friday"   },
+			{!"Saturday"	}
+		}
+	;
+
+	strcat(output, s_DaysNames[(value < 1 ? 1 : value > 7 ? 7 : value) - 1]);
 }
 
 // Do this last so the specifiers always use the native function
