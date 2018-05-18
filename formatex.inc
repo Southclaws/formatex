@@ -516,6 +516,33 @@ FormatSpecifier<'X'>(output[], value) {
 	format(output, sizeof(output), "%02x%06x", value >>> 24, value & 0xFFFFFF);
 }
 
+// Names of months starts at 1: January, ends at 12: December, anything below/above 1 or 12 will be wrapped to 1 and 12 respectively.
+FormatSpecifier<'M'>(output[], value) {
+	static const
+		s_MonthsNames[][] = {
+			{!"January"	}, {!"February"	}, {!"March"	},
+			{!"April"   }, {!"May"      }, {!"June"     },
+			{!"July"    }, {!"August"   }, {!"September"},
+			{!"October"  }, {!"November"}, {!"December" }
+		}
+	;
+
+	strcat(output, s_MonthsNames[(value < 1 ? 1 : value > 12 ? 12 : value) - 1]);
+}
+
+// Day of week names starts at 1: Sunday, ends at 7: Saturday, anything below/above 1 or 7 will be wrapped to 1 and 7 respectively.
+FormatSpecifier<'D'>(output[], value) {
+	static const
+		s_DaysNames[][] = {
+			{!"Sunday"		}, {!"Monday" 	}, {!"Tuesday"	},
+			{!"Wednesday"   }, {!"Thursday" }, {!"Friday"   },
+			{!"Saturday"	}
+		}
+	;
+
+	strcat(output, s_DaysNames[(value < 1 ? 1 : value > 7 ? 7 : value) - 1]);
+}
+
 // Do this last so the specifiers always use the native function
 #if FORMAT_REPLACE_NATIVES
 	#define format  formatex
