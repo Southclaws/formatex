@@ -354,6 +354,7 @@ stock printfex(const szFormatString[], {FORMAT_TAGS}:...) {
 	print(s_szBuffer);
 }
 
+#if !defined FORMAT_NO_DEFAULT_SPECIFIERS
 // -----------------------------------------------------------------------------------------------------
 // Specifiers
 // -----------------------------------------------------------------------------------------------------
@@ -515,6 +516,7 @@ FormatSpecifier<'v'>(output[], modelid) {
 FormatSpecifier<'X'>(output[], value) {
 	format(output, sizeof(output), "%02x%06x", value >>> 24, value & 0xFFFFFF);
 }
+#endif
 
 // Do this last so the specifiers always use the native function
 #if FORMAT_REPLACE_NATIVES
