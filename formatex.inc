@@ -354,15 +354,19 @@ stock printfex(const szFormatString[], {FORMAT_TAGS}:...) {
 	print(s_szBuffer);
 }
 
+#if !defined FORMAT_NO_DEFAULT_SPECIFIERS
 // -----------------------------------------------------------------------------------------------------
 // Specifiers
 // -----------------------------------------------------------------------------------------------------
 
+#if !defined FORMAT_NO_DEFAULT_SPECIFIER_C
 // Inline color
 FormatSpecifier<'C'>(output[], color) {
 	format(output, sizeof(output), "{%06x}", color >>> 8);
 }
+#endif
 
+#if !defined FORMAT_NO_DEFAULT_SPECIFIER_p
 // Player name
 FormatSpecifier<'p'>(output[], playerid) {
 	if (0 <= playerid < GetMaxPlayers() && IsPlayerConnected(playerid))
@@ -370,7 +374,9 @@ FormatSpecifier<'p'>(output[], playerid) {
 	else
 		strcat(output, "<UNKNOWN>");
 }
+#endif
 
+#if !defined FORMAT_NO_DEFAULT_SPECIFIER_P
 // Player name and color
 FormatSpecifier<'P'>(output[], playerid) {
 	if (0 <= playerid < GetMaxPlayers() && IsPlayerConnected(playerid)) {
@@ -380,7 +386,9 @@ FormatSpecifier<'P'>(output[], playerid) {
 	} else
 		strcat(output, "{FFFFFF}<UNKNOWN>");
 }
+#endif
 
+#if !defined FORMAT_NO_DEFAULT_SPECIFIER_W
 // Weapon name
 FormatSpecifier<'W'>(output[], weapon) {
 	static const
@@ -412,7 +420,9 @@ FormatSpecifier<'W'>(output[], weapon) {
 	else
 		strcat(output, "Unknown");
 }
+#endif
 
+#if !defined FORMAT_NO_DEFAULT_SPECIFIER_w
 // Weapon name, lower-case singular (for sentences)
 FormatSpecifier<'w'>(output[], weapon) {
 	static const
@@ -444,7 +454,9 @@ FormatSpecifier<'w'>(output[], weapon) {
 	else
 		strcat(output, "something unknown");
 }
+#endif
 
+#define FORMAT_NO_DEFAULT_SPECIFIER_v
 // Vehicle name
 FormatSpecifier<'v'>(output[], modelid) {
 	static const
@@ -510,11 +522,16 @@ FormatSpecifier<'v'>(output[], modelid) {
 	else
 		strcat(output, "Unknown");
 }
+#endif
 
+#if !defined FORMAT_NO_DEFAULT_SPECIFIER_X
 // Unsigned 4-byte hex
 FormatSpecifier<'X'>(output[], value) {
 	format(output, sizeof(output), "%02x%06x", value >>> 24, value & 0xFFFFFF);
 }
+#endif
+
+#endif // FORMAT_NO_DEFAULT_SPECIFIERS
 
 // Do this last so the specifiers always use the native function
 #if FORMAT_REPLACE_NATIVES
