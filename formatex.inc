@@ -456,7 +456,7 @@ FormatSpecifier<'w'>(output[], weapon) {
 }
 #endif
 
-#define FORMAT_NO_DEFAULT_SPECIFIER_v
+#if !defined FORMAT_NO_DEFAULT_SPECIFIER_v
 // Vehicle name
 FormatSpecifier<'v'>(output[], modelid) {
 	static const
