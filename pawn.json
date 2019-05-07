@@ -1,0 +1,8 @@
+{
+  "user": "Southclaws",
+  "repo": "formatex",
+  "entry": "test.pwn",
+  "output": "test.amx",
+  "dependencies": ["sampctl/samp-stdlib"],
+  "contributors": ["Slice/oscar-broman"]
+}
