@@ -2,6 +2,11 @@
 
 #include <a_samp>
 
+#if defined FORMATEX_INC
+	#endinput
+#endif
+#define FORMATEX_INC
+
 #if defined FORMAT_EXTRA_TAGS
 	#define FORMAT_TAGS  _, PlayerText3D, Text, Text3D, Menu, DB, DBResult, File, Float, FORMAT_EXTRA_TAGS
 #else
