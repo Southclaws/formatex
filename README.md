@@ -105,6 +105,46 @@ FormatSpecifier<'D'>(output[], Text:td) { ... }
 FormatSpecifier<'D'>(output[], const string[]) { ... }
 ```
 
+## Custom fallback values
+formatex allows you to customize the fallback return value of the following specifiers; `%P`, `%p`, `%W`, `%w`, and `%v`:
+
+```pawn
+#define FORMAT_FALLBACK_P "No player found"
+#define FORMAT_FALLBACK_p "{ABCDEF}void!!!"
+#define FORMAT_FALLBACK_W "Tis aint murica"
+#define FORMAT_FALLBACK_w "Ammunation"
+#define FORMAT_FALLBACK_v "Vrum Vrum much?"
+
+#include "formatex.inc"
+
+main() {
+
+	// Passing an invalid playerid
+	printf("%%P: %P", INVALID_PLAYER_ID);
+
+	// Passing an invalid playerid
+	printf("%%p: %p", -59);
+
+	// Passing an invalid weaponid
+	printf("%%W: %W", 9250);
+
+	// Passing an invalid weaponid
+	printf("%%w: %w", -560);
+
+	// Passing an invalid vehicleid
+	printf("%%v: %v", 10);
+}
+```
+
+**Output:**
+```plaintext
+%P: No player found
+%p: {ABCDEF}void!!!
+%W: Tis aint murica
+%w: Ammunation
+%v: Vrum Vrum much?
+```
+
 ## Additional notes
 
 Worth mentioning is this is a superset of format, meaning it has exactly all the
