@@ -1,8 +1,16 @@
-# formatex
+<h1 align="center">formatex</h1>
 
-[![sampctl](https://shields.southcla.ws/badge/sampctl-formatex-2f2f2f.svg?style=for-the-badge)](https://github.com/Southclaws/formatex)
+<p align="center">
+  <a href=https://github.com/Southclaws/formatex">
+    <img align="center" src="https://img.shields.io/badge/sampctl-formatex-2f2f2f.svg?style=for-the-badge">
+  </a>
+</p>
 
-Slice's formatex because it doesn't have a GitHub repo.
+<p align="center">
+  Slice's formatex because it doesn't have a GitHub repo.
+</p>
+
+---
 
 Original thread: http://forum.sa-mp.com/showthread.php?t=313488
 
