@@ -29,6 +29,7 @@
 	#define FORMAT_REPLACE_NATIVES true
 #endif
 
+
 #define FormatSpecifier<'%1'>(%2[%3],%4)  FMAT@1:F@%1(%2[FORMAT_CUSTOM_SPEC_BUFFER_SIZE],FMAT@2:___unused,%4)
 #define FMAT@2:___unused,%1[              %1[
 #define FMAT@1:%1(%2)                     forward %1(%2); public %1(%2)
@@ -372,16 +373,28 @@ FormatSpecifier<'C'>(output[], color) {
 #endif
 
 #if !defined FORMAT_NO_DEFAULT_SPECIFIER_p
+
+// Fallback value for the “p” specifier
+#if !defined FORMAT_FALLBACK_p
+	#define FORMAT_FALLBACK_p "<UNKNOWN>"
+#endif
+
 // Player name
 FormatSpecifier<'p'>(output[], playerid) {
 	if (0 <= playerid < GetMaxPlayers() && IsPlayerConnected(playerid))
 		GetPlayerName(playerid, output, sizeof(output));
 	else
-		strcat(output, "<UNKNOWN>");
+		strcat(output, #FORMAT_FALLBACK_p);
 }
 #endif
 
 #if !defined FORMAT_NO_DEFAULT_SPECIFIER_P
+
+// Fallback value for the “P” specifier
+#if !defined FORMAT_FALLBACK_P
+	#define FORMAT_FALLBACK_P "{FFFFFF}<UNKNOWN>"
+#endif
+
 // Player name and color
 FormatSpecifier<'P'>(output[], playerid) {
 	if (0 <= playerid < GetMaxPlayers() && IsPlayerConnected(playerid)) {
@@ -389,11 +402,17 @@ FormatSpecifier<'P'>(output[], playerid) {
 		
 		GetPlayerName(playerid, output[8], sizeof(output) - 8);
 	} else
-		strcat(output, "{FFFFFF}<UNKNOWN>");
+		strcat(output, #FORMAT_FALLBACK_P);
 }
 #endif
 
 #if !defined FORMAT_NO_DEFAULT_SPECIFIER_W
+
+// Fallback value for the “W” specifier
+#if !defined FORMAT_FALLBACK_W
+	#define FORMAT_FALLBACK_W "<UNKNOWN>"
+#endif
+
 // Weapon name
 FormatSpecifier<'W'>(output[], weapon) {
 	static const
@@ -423,11 +442,17 @@ FormatSpecifier<'W'>(output[], weapon) {
 	if (0 <= weapon < sizeof(s_WeaponNames))
 		strcat(output, s_WeaponNames[weapon]);
 	else
-		strcat(output, "Unknown");
+		strcat(output, #FORMAT_FALLBACK_W);
 }
 #endif
 
 #if !defined FORMAT_NO_DEFAULT_SPECIFIER_w
+
+// Fallback value for the “w” specifier
+#if !defined FORMAT_FALLBACK_w
+	#define FORMAT_FALLBACK_w "<UNKNOWN>"
+#endif
+
 // Weapon name, lower-case singular (for sentences)
 FormatSpecifier<'w'>(output[], weapon) {
 	static const
@@ -457,11 +482,17 @@ FormatSpecifier<'w'>(output[], weapon) {
 	if (0 <= weapon < sizeof(s_WeaponNamesLowercaseSingular))
 		strcat(output, s_WeaponNamesLowercaseSingular[weapon]);
 	else
-		strcat(output, "something unknown");
+		strcat(output, #FORMAT_FALLBACK_w);
 }
 #endif
 
 #if !defined FORMAT_NO_DEFAULT_SPECIFIER_v
+
+// Fallback value for the “v” specifier
+#if !defined FORMAT_FALLBACK_v
+	#define FORMAT_FALLBACK_v "<UNKNOWN>"
+#endif
+
 // Vehicle name
 FormatSpecifier<'v'>(output[], modelid) {
 	static const
@@ -525,7 +556,7 @@ FormatSpecifier<'v'>(output[], modelid) {
 	if (0 <= (modelid -= 400) < sizeof(s_VehicleNames))
 		strcat(output, s_VehicleNames[modelid]);
 	else
-		strcat(output, "Unknown");
+		strcat(output, #FORMAT_FALLBACK_v);
 }
 #endif
 
