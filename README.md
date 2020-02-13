@@ -1,16 +1,8 @@
-<h1 align="center">formatex</h1>
+# formatex
 
-<p align="center">
-  <a href=https://github.com/Southclaws/formatex">
-    <img align="center" src="https://img.shields.io/badge/sampctl-formatex-2f2f2f.svg?style=for-the-badge">
-  </a>
-</p>
+[![sampctl](https://shields.southcla.ws/badge/sampctl-formatex-2f2f2f.svg?style=for-the-badge)](https://github.com/Southclaws/formatex)
 
-<p align="center">
-  Slice's formatex because it doesn't have a GitHub repo.
-</p>
-
----
+Slice's formatex because it doesn't have a GitHub repo.
 
 Original thread: http://forum.sa-mp.com/showthread.php?t=313488
 
@@ -114,6 +106,7 @@ FormatSpecifier<'D'>(output[], const string[]) { ... }
 ```
 
 ## Custom fallback values
+
 formatex allows you to customize the fallback return value of the following specifiers; `%P`, `%p`, `%W`, `%w`, and `%v`:
 
 ```pawn
@@ -145,6 +138,7 @@ main() {
 ```
 
 **Output:**
+
 ```plaintext
 %P: No player found
 %p: {ABCDEF}void!!!
