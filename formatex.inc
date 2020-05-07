@@ -565,8 +565,6 @@ FormatSpecifier<'v'>(output[], modelid) {
 FormatSpecifier<'X'>(output[], value) {
 	format(output, sizeof(output), "%02x%06x", value >>> 24, value & 0xFFFFFF);
 }
-#endif
-
 #endif // FORMAT_NO_DEFAULT_SPECIFIERS
 
 // Do this last so the specifiers always use the native function
